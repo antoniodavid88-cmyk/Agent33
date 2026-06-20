@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    .contact-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .contact-card {
+      width: 100%;
+      max-width: 560px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 42px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+    }
+
+    .contact-card h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 6vw, 48px);
+      color: #111827;
+    }
+
+    .contact-card p {
+      margin: 0 0 28px;
+      line-height: 1.7;
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      padding: 15px 28px;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.28);
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.34);
+    }
+  </style>
+</head>
+<body>
+  <main class="contact-section">
+    <section class="contact-card" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact us</h1>
+      <p>Need help or have a question? Click the button below to contact us directly.</p>
+      <a href="#" class="contact-button" id="contactButton" rel="nofollow">Contact us</a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const name = ['antinio', 'david88'].join('');
+      const provider = ['gmail', 'com'].join('.');
+      const contactButton = document.getElementById('contactButton');
+
+      contactButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.location.href = 'mailto:' + name + '@' + provider + '?subject=Contact%20us';
+      });
+    })();
+  </script>
+</body>
+</html>
